@@ -11,7 +11,7 @@ const brand = {
 
 // Cloudflare Pages / Vite production setup:
 // put the logo at public/cyto-logo.png and reference it from the site root.
-const logoSrc = "/public/cyto-logo.png";
+const logoSrc = "/cyto-logo.png.png";
 
 function CytoLogo({ dark = false, className = "" }) {
   return (
