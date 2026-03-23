@@ -255,6 +255,10 @@ export default function CytoDollarsSite() {
             Schedule Consultation
           </a>
 
+          <p className="mt-10 text-sm text-white/70">
+            Wisma UOA 2, Level 15 Unit 13A (15-13A), No. 21, Jalan Pinang, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.
+          </p>
+
           <p className="mt-10 text-sm text-white/60">
             © {new Date().getFullYear()} Cyto Dollars. All rights reserved.
           </p>
