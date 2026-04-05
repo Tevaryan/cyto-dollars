@@ -73,6 +73,12 @@ export default function CytoDollarsSite() {
       description:
         "Advisory for companies operating across borders to improve payment flows, treasury coordination, and international financial operations.",
     },
+    {
+      title: "Counterparty Risk & Compliance Screening",
+      icon: Briefcase,
+      description:
+        "We support companies with institutional-grade counterparty screening and compliance checks, leveraging industry-standard tools to assess risk exposure, strengthen onboarding decisions, and ensure regulatory alignment.",
+    }
   ];
 
   const highlights = [
