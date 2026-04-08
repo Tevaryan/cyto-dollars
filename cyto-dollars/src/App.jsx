@@ -49,12 +49,12 @@ export default function CytoDollarsSite() {
       description:
         "Strategic financial advisory for founders, corporations, and international businesses seeking clarity in capital planning, financial structure, and long-term growth decisions.",
     },
-    {
-      title: "Digital Asset Advisory",
-      icon: Briefcase,
-      description:
-        "Advisory on digital assets and how companies can incorporate them into treasury and financial systems to improve efficiency, diversify reserves, and support modern financial operations.",
-    },
+    // {
+    //   title: "Digital Asset Advisory",
+    //   icon: Briefcase,
+    //   description:
+    //     "Advisory on digital assets and how companies can incorporate them into treasury and financial systems to improve efficiency, diversify reserves, and support modern financial operations.",
+    // },
     {
       title: "Business Operations Advisory",
       icon: Settings,
