@@ -511,15 +511,12 @@ export default function App() {
             Schedule Consultation
           </a>
 
-           <p>
-            CYTO DOLLARS SDN BHD (202601004652 (1666749-A))
-          </p>
-
           <p className="address">
             Wisma UOA 2, Level 15 Unit 13A (15-13A), No. 21, Jalan Pinang, 50450 Kuala Lumpur,
             Wilayah Persekutuan Kuala Lumpur, Malaysia.
           </p>
           <button type="button" className="footerLink" onClick={() => goToPage("privacy")}>Privacy Policy</button>
+          <p className="copyright">CYTO DOLLARS SDN BHD (202601004652 (1666749-A))</p>
           <p className="copyright">© {new Date().getFullYear()} Cyto Dollars. All rights reserved.</p>
         </div>
       </footer>
