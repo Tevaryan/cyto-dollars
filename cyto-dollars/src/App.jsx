@@ -511,7 +511,7 @@ export default function App() {
             Schedule Consultation
           </a>
 
-           <p className="address">
+           <p>
             CYTO DOLLARS SDN BHD (202601004652 (1666749-A))
           </p>
 
