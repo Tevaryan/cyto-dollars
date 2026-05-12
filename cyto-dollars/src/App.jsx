@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Briefcase, Settings, RefreshCcw, Globe } from "lucide-react";
 
 const brand = {
   gold: "#D4A017",
@@ -9,22 +8,20 @@ const brand = {
   text: "#5E5A52",
 };
 
-// Cloudflare Pages / Vite production setup:
-// put the logo at public/cyto-logo.png and reference it from the site root.
-const logoSrc = "/cyto-logo-large.png.png";
+const logoSrc = "/cyto-logo.png";
 
-function CytoLogo({ dark = false, className = "" }) {
+function CytoLogo({ dark = false }) {
   return (
-    <div
-      className={`inline-flex items-center ${className}`}
-      style={dark ? { backgroundColor: "#FFFFFF", padding: "10px 14px", borderRadius: "16px" } : undefined}
-    >
-      <img
-        src={logoSrc}
-        alt="CYTO logo"
-        className="h-12 w-auto object-contain block"
-        style={{ maxWidth: dark ? "320px" : "280px" }}
-      />
+    <div className="logoWrap" style={dark ? { backgroundColor: "#fff" } : undefined}>
+      <img src={logoSrc} alt="Cyto Dollars logo" className="logo" />
+    </div>
+  );
+}
+
+function ServiceIcon({ label }) {
+  return (
+    <div className="serviceIcon" aria-hidden="true">
+      {label}
     </div>
   );
 }
@@ -363,49 +360,40 @@ export default function App() {
           </section>
         </main>
       )}
-      
-      <section id="contact" className="py-20" style={{ backgroundColor: brand.black, color: "white" }}>
-        <div className="mx-auto max-w-6xl px-6 lg:px-8">
-          <div className="flex items-center mb-8">
-            <CytoLogo dark className="[&>img]:h-16" />
+
+      <footer id="contact" className="footer">
+        <div className="container">
+          <div className="footerLogo">
+            <CytoLogo dark />
           </div>
+          <h2 style={{ color: "#fff" }}>Speak with our advisory team.</h2>
+          <p className="footerText">
+            If you would like to discuss your financial structure, operations, or international business needs,
+            our team would be happy to connect.
+          </p>
 
-          <div className="max-w-2xl">
-            <h2 className="text-3xl font-semibold">Speak with our advisory team.</h2>
-
-            <p className="mt-4 text-white/75">
-              If you would like to discuss your financial structure, operations, or international business needs,
-              our team would be happy to connect.
-            </p>
+          <div className="formGrid">
+            <input value={form.name} onChange={(e) => updateForm("name", e.target.value)} placeholder="Name" />
+            <input value={form.company} onChange={(e) => updateForm("company", e.target.value)} placeholder="Company" />
+            <input value={form.email} onChange={(e) => updateForm("email", e.target.value)} placeholder="Email" />
           </div>
-
-          <div className="grid md:grid-cols-3 gap-4 mt-10" style={{ gridTemplateColumns: isMobile ? '1fr' : undefined }}>
-            <input value={form.name} onChange={(e)=>handleChange("name",e.target.value)} className="rounded-lg px-4 py-3 text-gold border" style={{ borderColor: brand.gold }} placeholder="Name" />
-            <input value={form.company} onChange={(e)=>handleChange("company",e.target.value)} className="rounded-lg px-4 py-3 text-gold border" style={{ borderColor: brand.gold }} placeholder="Company" />
-            <input value={form.email} onChange={(e)=>handleChange("email",e.target.value)} className="rounded-lg px-4 py-3 text-gold border" style={{ borderColor: brand.gold }} placeholder="Email" />
-          </div>
-
-          <textarea value={form.message} onChange={(e)=>handleChange("message",e.target.value)} className="mt-4 w-full rounded-lg px-4 py-3 text-gold min-h-[140px] border" style={{ borderColor: brand.gold }} placeholder="Tell us briefly about your business"></textarea>
-
-          <a
-            href={openCalendly}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center mt-4 px-6 py-3 rounded-lg font-medium transition hover:opacity-90 cursor-pointer"
-            style={{ backgroundColor: brand.gold, color: "white", pointerEvents: "auto" }}
-          >
+          <textarea
+            value={form.message}
+            onChange={(e) => updateForm("message", e.target.value)}
+            placeholder="Tell us briefly about your business"
+          />
+          <a className="footerBtn" href={calendlyUrl} target="_blank" rel="noopener noreferrer">
             Schedule Consultation
           </a>
 
-          <p className="mt-10 text-sm text-white/70">
-            Wisma UOA 2, Level 15 Unit 13A (15-13A), No. 21, Jalan Pinang, 50450 Kuala Lumpur, Wilayah Persekutuan Kuala Lumpur, Malaysia.
+          <p className="address">
+            Wisma UOA 2, Level 15 Unit 13A (15-13A), No. 21, Jalan Pinang, 50450 Kuala Lumpur,
+            Wilayah Persekutuan Kuala Lumpur, Malaysia.
           </p>
-
-          <p className="mt-10 text-sm text-white/60">
-            © {new Date().getFullYear()} Cyto Dollars. All rights reserved.
-          </p>
+          <button type="button" className="footerLink" onClick={() => goToPage("privacy")}>Privacy Policy</button>
+          <p className="copyright">© {new Date().getFullYear()} Cyto Dollars. All rights reserved.</p>
         </div>
-      </section>
+      </footer>
     </div>
   );
 }
