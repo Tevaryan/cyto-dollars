@@ -1,0 +1,14 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "cyto-dollars",
+  "compatibility_date": "2026-05-12",
+  "observability": {
+    "enabled": true
+  },
+  "assets": {
+    "directory": "cyto-dollars"
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}
