@@ -512,6 +512,7 @@ export default function App() {
           </a>
 
           <p className="address">
+            CYTO DOLLARS SDN BHD (202601004652 (1666749-A))
             Wisma UOA 2, Level 15 Unit 13A (15-13A), No. 21, Jalan Pinang, 50450 Kuala Lumpur,
             Wilayah Persekutuan Kuala Lumpur, Malaysia.
           </p>
