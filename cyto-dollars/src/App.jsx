@@ -149,13 +149,17 @@ export default function App() {
         .privacyHero { border-bottom: 1px solid ${brand.border}; background: ${brand.light}; padding-top: 72px; padding-bottom: 72px; }
         .privacyContent { padding-top: 72px; padding-bottom: 72px; }
         .policyCard { background: #fff; border: 1px solid ${brand.border}; border-radius: 28px; padding: 36px; box-shadow: 0 20px 60px rgba(0,0,0,0.06); }
-        .policyCard h2 { margin-top: 32px; font-size: 26px; }
+        .policyCard h2 { margin-top: 32px; margin-bottom: 20px; font-size: 26px; }
         .policyCard h2:first-child { margin-top: 0; }
         .policyCard p, .policyCard li { color: ${brand.text}; line-height: 1.75; }
         .policyCard p + p { margin-top: 22px; }
-        .policyCard ol, .policyCard ul { padding-left: 28px; margin-top: 16px; margin-bottom: 16px; }
-        .policyCard ol { list-style-type: decimal; }
-        .policyCard ul { list-style-type: disc; }
+        .policyCard > p { padding-left: 32px; }
+        .policyCard > h2 + p { padding-left: 32px; }
+        .policyCard .numberedParagraph { padding-left: 32px; }
+        .policyCard .policyRoman { list-style-type: lower-roman; padding-left: 96px; margin-top: 16px; margin-bottom: 16px; }
+        .policyCard .policyRoman li { padding-left: 8px; }
+        .policyCard ul { list-style-type: disc; padding-left: 96px; margin-top: 16px; margin-bottom: 16px; }
+        .policyCard .policyContact p { padding-left: 0; }
         .policyCard ol li::marker, .policyCard ul li::marker { color: ${brand.gold}; font-weight: 700; }
         .policyCard li { margin-bottom: 10px; }
         .policyContact { margin-top: 28px; padding: 20px; border-radius: 18px; background: ${brand.light}; border: 1px solid ${brand.border}; }
@@ -286,73 +290,194 @@ export default function App() {
             <div className="container">
               <article className="policyCard">
                 <h2>A. Introduction</h2>
+
                 <p>
-                  Cyto Dollars Sdn Bhd (“CDSB”) is committed to the protection of your personal data in and outside of Malaysia. This Personal Data Protection Notice explains the collection, processing, storing and disclosure of your personal data pursuant to the Personal Data Protection Act 2010.
+                  Cyto Dollars Sdn Bhd (“CDSB“) is committed to the protection of your personal
+                  data in and outside of Malaysia. This personal data protection notice
+                  (“Notice“) explains the collection, processing, storing and disclosure of your
+                  personal data pursuant to the Personal Data Protection Act 2010 (“Act”).
                 </p>
+
                 <p>
-                  By visiting our website, interacting with us, or providing personal data to us, you are deemed to have read and consented to the use, collection, processing and storing of your personal data in the manner described in this Notice by CDSB or on behalf of CDSB.
+                  By visiting our website or by interacting with us or by providing your personal
+                  data to us, you are deemed to have read and consent to the using, collecting,
+                  processing and storing of your personal data in the manner described in this
+                  Notice by the CDSB or on behalf of the CDSB.
                 </p>
+
                 <p>
-                  CDSB reserves the right to change, amend and/or vary this Notice at any time. You are advised to check this Notice on our website from time to time for amendments or updates.
+                  Kindly note that the CDSB reserves the right to change, amend and/or vary this
+                  Notice at any time. You are advised to check this Notice on our website from
+                  time to time for amendments or updates. By continuing to communicate with
+                  the CDSB, you signify your acceptance to such amendments and updates.
                 </p>
 
                 <h2>B. Collection of Personal Data</h2>
-                <p>CDSB may collect your personal data upon and throughout the course of your dealings with CDSB, including but not limited to:</p>
-                <ol>
-                  <li>Your personal details, including details relating to other persons who may be identified from your details provided to us, such as name, identity card number, age, nationality, contact number, residential address, email address, birth date, gender, occupation, designation, bank account details and information of spouse or children.</li>
-                  <li>Any sensitive personal data which may include, but is not limited to, medical conditions and medication taken by you where applicable.</li>
-                  <li>Details of any person identifiable from your personal data.</li>
-                  <li>Other information from which you are identifiable.</li>
+
+                <p className="numberedParagraph">
+                  1. The CDSB will collect your personal data upon and throughout the course
+                  of your dealings with the CDSB including, but not limited to:-
+                </p>
+
+                <ol className="policyRoman" type="i">
+                  <li>
+                    Your personal details, including details relating to other person(s)
+                    who may be identified from your details provided to us, such as
+                    name, identity card number, age, nationality, contact number,
+                    residential address, e-mail address, birth date, gender, occupation,
+                    designation, bank account details and information of spouse/
+                    children;
+                  </li>
+
+                  <li>
+                    Any sensitive personal data which may include but not limited to
+                    medical conditions and medication taken by you (where
+                    applicable);
+                  </li>
+
+                  <li>
+                    Details of any person(s) identifiable from your personal data;
+                    and/or
+                  </li>
+
+                  <li>
+                    Other information from which you are identifiable from.
+                  </li>
                 </ol>
-                <p>
-                  CDSB may also collect Personal Data from other sources, including events organised by CDSB and cookies used on CDSB’s website. Where you provide Personal Data of another individual, you must ensure that you have informed that individual and obtained their consent.
+
+                <p>(Collectively referred to as “Personal Data“)</p>
+
+                <p className="numberedParagraph">
+                  2. In addition to the Personal Data you provide to the CDSB directly, the
+                  CDSB may also collect your Personal Data from a variety of other sources,
+                  including without limitation at any events organised by the CDSB and/or
+                  from the cookies used on the CDSB’s website.
+                </p>
+
+                <p className="numberedParagraph">
+                  3. Where you have provided Personal Data of another individual (“Third
+                  Party“), you must ensure that you have informed the Third Party that you
+                  are providing the Third Party’s Personal Data to us, and have obtained
+                  the Third Party’s consent to do so.
+                </p>
+
+                <p className="numberedParagraph">
+                  4. Kindly note that it would be obligatory for you to provide us with the
+                  abovementioned Personal Data for us to fulfil the purposes as provided
+                  for in Paragraph 5.
                 </p>
 
                 <h2>C. Purposes</h2>
-                <p>Personal Data collected by CDSB may be used for the following purposes:</p>
-                <ol>
-                  <li>Providing services to you or responding to queries from you and/or your representative.</li>
-                  <li>Internal record keeping and internal investigations.</li>
-                  <li>Communicating with you.</li>
-                  <li>Taxation and/or auditing purposes.</li>
-                  <li>Conducting events, programmes, client promotional activities, marketing, promotional and client profiling activities.</li>
-                  <li>Sending newsletters, articles and other updates.</li>
-                  <li>Exercising any function or obligation imposed by law and/or towards the administration of justice.</li>
-                  <li>Any purpose incidental, ancillary or in furtherance of the above purposes.</li>
+
+                <p className="numberedParagraph">
+                  5. Personal Data collected by the CDSB may be used for, but not limited to
+                  the following purposes:-
+                </p>
+
+                <ol className="policyRoman" type="i">
+                  <li>Providing services to you or responding to any query from you and/or your representative;</li>
+                  <li>The CDSB’s internal record keeping;</li>
+                  <li>The CDSB’s internal investigations;</li>
+                  <li>Communicating with you;</li>
+                  <li>Taxation and/or auditing purposes;</li>
+                  <li>
+                    Conducting events and programmes, client promotional activities,
+                    marketing, promotional and client profiling activities in
+                    connection with our services;
+                  </li>
+                  <li>Sending material such as newsletters, articles and other updates;</li>
+                  <li>
+                    For the exercise of any functions conferred or obligation imposed
+                    on any person by law and/or towards the administration of justice;
+                    and/or
+                  </li>
+                  <li>
+                    For any purpose incidental, ancillary or in furtherance to the
+                    abovementioned purposes.
+                  </li>
                 </ol>
 
+                <p>(collectively referred to as “Purposes”)</p>
+
+                <p>
+                  If you do not consent to the CDSB processing your Personal Data or the Personal
+                  Data of any person which may be identified from the Personal Data provided to
+                  the CDSB for any of the Purposes listed in this Notice, please notify the CDSB
+                  using the contact details stated in Section H below.
+                </p>
+
                 <h2>D. Disclosure to Third Parties</h2>
-                <p>Your Personal Data may be disclosed to third parties where necessary, including:</p>
-                <ol>
-                  <li>External professional advisors, auditors, service and product providers and subcontractors.</li>
-                  <li>Governmental departments and authorities.</li>
-                  <li>Insurance agents or companies.</li>
-                  <li>Banks and financial institutions.</li>
-                  <li>Companies or providers of corporate advisory or due diligence services in connection with due diligence exercises carried out by CDSB.</li>
-                  <li>Any assignee or transferee, whether actual or prospective, to facilitate transactions involving CDSB.</li>
+
+                <p className="numberedParagraph">
+                  6. If and when necessary, your Personal Data may be disclosed to the
+                  following third-parties:-
+                </p>
+
+                <ol className="policyRoman" type="i">
+                  <li>External professional advisors, auditors, service & product providers and subcontractors;</li>
+                  <li>Governmental departments and authorities;</li>
+                  <li>Insurance agents or companies;</li>
+                  <li>Banks and financial institutions;</li>
+                  <li>
+                    CDSBs or providers of corporate advisory services or due diligence
+                    services in connection with due diligence exercises that may be
+                    carried out by the CDSB; and/or
+                  </li>
+                  <li>
+                    Any assignee or transferee (whether actual or prospective) to
+                    facilitate any transactions involving the CDSB.
+                  </li>
                 </ol>
 
                 <h2>E. Security of Personal Data</h2>
-                <p>
-                  CDSB’s main data server is located in Malaysia. Where Personal Data is transferred outside Malaysia, CDSB ensures that confidentiality safeguards are in place so that your rights to personal data protection remain unaffected.
+
+                <p className="numberedParagraph">
+                  7. The CDSB’s main data server is located in Malaysia. In the event that your
+                  Personal Data is transferred to a location outside of Malaysia, the CDSB
+                  ensures that confidentiality safeguards have been put in place to ensure
+                  your rights to personal data protection remains unaffected. Where we
+                  consider it necessary or appropriate for the purposes of data storage or
+                  processing or providing any service or deliverable on our behalf to you,
+                  we may transfer Personal Data to a third-party service or product
+                  providers within or outside the country in which we are established,
+                  under conditions of confidentiality and similar levels of security
+                  safeguards.
                 </p>
 
                 <h2>F. Access and Correction</h2>
-                <p>
-                  Personal Data must be accurate, complete, not misleading and kept up to date. If any Personal Data provided to CDSB has become inaccurate, incomplete, misleading, incorrect or out of date, you should notify CDSB using the contact details below.
+
+                <p className="numberedParagraph">
+                  8. The Personal Data must be accurate, complete, not misleading and kept
+                  up-to-date. Should you be made aware of any inaccurate, incomplete or
+                  misleading Personal Data or where the Personal Data provided to the CDSB
+                  earlier have become incorrect or out of date, kindly notify the CDSB at the
+                  details provided for in paragraph 11.
                 </p>
-                <p>
-                  Except as provided by law, you have the right to request access to and correction of your Personal Data, subject to the requirements of the Act.
+
+                <p className="numberedParagraph">
+                  9. Except as provided by law, you have the right to request access and
+                  correct your Personal Data. Such request however, may be subject to the
+                  requirements in the Act.
                 </p>
 
                 <h2>G. Retention Standard</h2>
-                <p>
-                  Personal Data shall not be kept longer than necessary for the fulfilment of the purposes stated in this Notice. CDSB shall ensure that Personal Data is destroyed or permanently deleted if it is no longer required for the purposes for which it was processed.
+
+                <p className="numberedParagraph">
+                  10. Any Personal Data shall not be kept longer than is necessary for the
+                  fulfilment of the Purposes mentioned in this Notice. The CDSB shall
+                  undertake to ensure that all Personal Data is destroyed or permanently
+                  deleted if it is no longer required for the Purposes for which it was to be
+                  processed.
                 </p>
 
                 <h2>H. Inquiries</h2>
+
                 <div className="policyContact">
-                  <p>For all further queries, complaints or requests, kindly contact:</p>
+                  <p>
+                    11. For all further queries, complaints or request(s), kindly attention them to
+                    the following email:-
+                  </p>
+
                   <p><strong>info@cytodollars.com</strong></p>
                 </div>
               </article>
