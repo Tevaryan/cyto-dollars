@@ -8,7 +8,7 @@ const brand = {
   text: "#5E5A52",
 };
 
-const logoSrc = "/cyto-logo.png";
+const logoSrc = "/cyto-logo-large.png.png";
 
 function CytoLogo({ dark = false }) {
   return (
